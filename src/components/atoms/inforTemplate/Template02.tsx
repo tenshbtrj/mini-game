@@ -17,7 +17,7 @@ export const Template02 = (props: Props) => {
             <div className="">{props.title}</div>
             <hr className="border-gray-500" />
             <div className="w-[350px] h-[168px] flex items-center justify-center">
-                <img className="max-w-full max-h-full object-contain" src={`/src/configs/infomations/image/${props.imgSrc}.png`}></img>
+                <img className="max-w-full max-h-full object-contain" src={`/public/template02/${props.imgSrc}.png`}></img>
             </div>
         </div>
     );
