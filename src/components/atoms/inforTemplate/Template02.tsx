@@ -17,8 +17,12 @@ export const Template02 = (props: Props) => {
             <div className="">{props.title}</div>
             <hr className="border-gray-500" />
             <div className="w-[350px] h-[168px] flex items-center justify-center">
-                <img className="max-w-full max-h-full object-contain" src={`/src/configs/infomations/image/${props.imgSrc}.png`}></img>
+                <img className="max-w-full max-h-full object-contain" src={getImage(props.imgSrc)}></img>
             </div>
         </div>
     );
 }
+
+const getImage = (fileName: string): string => {
+    return new URL(`/src/configs/infomations/image/${fileName}.png`, import.meta.url).href;
+};
