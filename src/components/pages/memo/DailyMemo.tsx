@@ -9,7 +9,7 @@ export const DailyMemo = () => {
 
   useEffect(() => {
     getMemoList().then((value) => {
-      setMemoList(value);
+      setMemoList(value ?? []);
     });
   }, []);
 
@@ -18,7 +18,7 @@ export const DailyMemo = () => {
 
     // もう一度取得
     getMemoList().then((value) => {
-      setMemoList(value);
+      setMemoList(value ?? []);
     });
   }, [text]);
 
