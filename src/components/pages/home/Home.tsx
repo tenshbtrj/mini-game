@@ -1,7 +1,10 @@
 import { Header } from "@/components/atoms/Header"
 import { Infomations } from "@/components/atoms/Infomations";
+import { hello } from "@/utils/HelloApi";
 
 export const Home = () => {
+    hello();
+
     return (
         <>
             <Header title="Home"></Header>
