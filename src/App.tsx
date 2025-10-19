@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from '@/components/pages/home/Home'
 import { Clicker } from '@/components/pages/clicker/Clicker'
-import { Memo } from '@/components/pages/memo/Memo'
+import { DailyMemo } from '@/components/pages/memo/DailyMemo'
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/clicker' element={<Clicker />} />
-        <Route path='/Memo' element={<Memo />} />
+        <Route path='/Memo' element={<DailyMemo />} />
       </Routes>
     </BrowserRouter>
   )
