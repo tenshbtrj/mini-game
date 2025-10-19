@@ -15,9 +15,17 @@ export const getMemoList = async (): Promise<Memo[]> => {
   })
     .then((value: Response) => {
       // レスポンスからJSONデータを取得するために .json() を呼び出す
+
+      if(!value.ok){
+        throw new Error(`レスポンスが異常です。url[/api/memo],status[${value.ok}]`)
+      }
       return value.json();
     })
     .then((json) => {
+      
+      if(!json){
+        throw new Error(`レスポンスがありません。url[/api/memo]`)
+      }
       // JSONデータを受け取った後の処理
       return json;
     })
