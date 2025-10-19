@@ -9,6 +9,8 @@ export interface Memo {
  */
 export const getMemoList = async (): Promise<Memo[]> => {
   return fetch(new URL("/api/memo", import.meta.env.VITE_API_PATH), {
+    method: 'GET',
+    mode: 'cors',
     headers: {
       "content-type": "application/json",
     },
