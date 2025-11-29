@@ -1,6 +1,6 @@
 "use client";
+import { getAll, type Memo } from "@/api/memo/getAll";
 import { Header } from "@/components/atoms/Header";
-import { addMemoList, getMemoList, type Memo } from "@/utils/MemoList";
 import { useCallback, useEffect, useState } from "react";
 
 export const DailyMemo = () => {
@@ -8,19 +8,19 @@ export const DailyMemo = () => {
   const [text, setText] = useState<string>("");
 
   useEffect(() => {
-    getMemoList().then((value) => {
-      setMemoList(value ?? []);
+    getAll().then((json) => {
+      setMemoList(json.results);
     });
   }, []);
 
   const addClick = useCallback(() => {
-    addMemoList(text);
+    // addMemoList(text);
 
     // もう一度取得
-    getMemoList().then((value) => {
-      setMemoList(value ?? []);
+    getAll().then((json) => {
+      setMemoList(json.results);
     });
-  }, [text]);
+  }, []);
 
   return (
     <>

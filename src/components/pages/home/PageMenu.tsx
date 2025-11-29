@@ -3,7 +3,8 @@ import { tv } from "tailwind-variants";
 const pageList = [
     { name: "Home", url: "/" },
     { name: "Clicker", url: "/Clicker" },
-    { name: "Memo", url: "/Memo" }
+    { name: "Memo", url: "/Memo" },
+    { name: "Test", url: "/Test" },
 ]
 
 export interface Props {
